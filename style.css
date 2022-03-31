@@ -1,3 +1,13 @@
+@font-face {
+    font-family: Merriweather;
+    src: url(./assets/fonts/Merriweather/Merriweather-Regular.ttf);
+}
+
+@font-face {
+    font-family: open-sans;
+    src: url(./assets/fonts/Open_Sans/OpenSans-Regular.ttf);
+}
+
 *,
 *::before,
 *::after {
@@ -34,10 +44,10 @@ h6 {
 
 html,
 body {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
+    font-family: open-sans;
+    font-size: 15px;
     font-weight: 400;
-    line-height: 1;
+    line-height: 24px;
 }
 
 

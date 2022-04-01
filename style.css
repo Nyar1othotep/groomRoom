@@ -220,7 +220,6 @@ main {
 
 .hero__container {
     position: relative;
-    padding: 343px 0px 243px 0px;
     background-image: url('./assets/img/hero-cat.png');
     background-position: bottom right;
     background-repeat: no-repeat;
@@ -229,6 +228,7 @@ main {
 }
 
 .hero__body {
+    padding: 343px 0px 243px 0px;
     position: relative;
     max-width: 480px;
     z-index: 2;
@@ -254,6 +254,13 @@ main {
 
 /* ----------------MEDIA------------------------------------------------- */
 
+@media (max-width: 1024px) {
+    /* ----------------HERO------------------------------------------------- */
+    .hero__body {
+        padding: 273px 0px 173px 0px;
+    }
+}
+
 @media (max-width: 992px) {
     /* ----------------HEADER------------------------------------------------- */
     .header {
@@ -261,6 +268,10 @@ main {
     }
     .menu-header__list>*:not(:last-child) {
         margin: 0px 25px 0px 0px;
+    }
+    /* ----------------HERO------------------------------------------------- */
+    .hero__body {
+        max-width: 420px;
     }
 }
 
@@ -359,6 +370,38 @@ main {
     .header__auth {
         margin: 0px 20px 0px 0px;
     }
+    /* ----------------HERO------------------------------------------------- */
+    .hero__container {
+        background-position: bottom center;
+        background-size: 70%;
+    }
+    .hero__body {
+        padding: 183px 0px 643px 0px;
+        margin: 0 auto;
+    }
+    .hero__heading {
+        font-size: 38px;
+    }
+    .hero__btn {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 642px) {
+    /* ----------------HERO------------------------------------------------- */
+    .hero__body {
+        padding: 183px 0px 543px 0px;
+    }
+    .hero__heading {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 525px) {
+    /* ----------------HERO------------------------------------------------- */
+    .hero__body {
+        padding: 163px 0px 433px 0px;
+    }
 }
 
 @media (max-width: 425px) {
@@ -374,5 +417,12 @@ main {
     }
     .auth {
         font-size: 12px;
+    }
+    /* ----------------HERO------------------------------------------------- */
+    .hero__body {
+        padding: 133px 0px 363px 0px;
+    }
+    .hero__btn {
+        width: 100%;
     }
 }

@@ -38,8 +38,12 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: inherit;
-    font-size: inherit;
+    font-family: Merriweather;
+    font-weight: 400;
+}
+
+button {
+    background: none;
 }
 
 html,
@@ -47,7 +51,43 @@ body {
     font-family: open-sans;
     font-size: 15px;
     font-weight: 400;
-    line-height: 24px;
+    line-height: calc(24 / 15 * 100%);
+    color: #ffffff;
+}
+
+.btn {
+    font-family: Merriweather;
+    border-radius: 100px;
+    display: flex;
+    min-height: 52px;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 45px;
+    font-size: 17px;
+    line-height: calc(22 / 17 * 100%);
+    letter-spacing: 0.06em;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.hero__btn--skin {
+    background: #F1CDB3;
+    outline: 0px solid #000;
+    color: #000;
+}
+
+.hero__btn--skin:hover {
+    background: #f1cdb382;
+    outline: 2px solid #ffffff;
+    color: rgb(255, 255, 255);
+}
+
+.menu-list {
+    display: flex;
+    align-items: center;
 }
 
 
@@ -89,4 +129,250 @@ main {
     left: 0;
     -o-object-fit: cover;
     object-fit: cover;
+}
+
+
+/* ----------------HEADER------------------------------------------------- */
+
+.header {
+    padding: 60px 0px 0px 0px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 50;
+}
+
+.header__body {
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+}
+
+.header__logo h3 {
+    margin: 0px 0px 10px 0px;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: calc(35 / 32 * 100%);
+    letter-spacing: 0.06em;
+    color: #F1CDB3;
+}
+
+.header__logo p {
+    font-size: 13px;
+    line-height: calc(15 / 13 * 100%);
+    letter-spacing: 0.1em;
+    color: #ffffff;
+}
+
+.header__right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.menu-header__list>*:not(:last-child) {
+    margin: 0px 40px 0px 0px;
+}
+
+.menu-header__list>* {
+    position: relative;
+}
+
+.menu-header__list>*::before {
+    position: absolute;
+    content: '';
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    border-bottom: 2px solid #F1CDB3;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-header__list>*:hover::before {
+    width: 100%;
+}
+
+.menu-header__link {
+    padding: 5px 0;
+    color: #CDCDCD;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-header__link:hover {
+    color: #ffffff;
+}
+
+.header__auth {
+    margin: 0px 0px 0px 40px;
+}
+
+.auth>*:hover {
+    cursor: pointer;
+}
+
+
+/* ----------------HERO------------------------------------------------- */
+
+.hero {
+    position: relative;
+}
+
+.hero__container {
+    position: relative;
+    padding: 343px 0px 243px 0px;
+    background-image: url('./assets/img/hero-cat.png');
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: 55%;
+    z-index: 4;
+}
+
+.hero__body {
+    position: relative;
+    max-width: 480px;
+    z-index: 2;
+}
+
+.hero__body>*:not(:last-child) {
+    margin: 0px 0px 54px 0px;
+}
+
+.hero__heading {
+    font-size: 44px;
+    line-height: calc(57 / 44 * 100%);
+}
+
+.hero__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+/* ----------------MEDIA------------------------------------------------- */
+
+@media (max-width: 992px) {
+    /* ----------------HEADER------------------------------------------------- */
+    .header {
+        padding: 30px 0px 0px 0px;
+    }
+    .menu-header__list>*:not(:last-child) {
+        margin: 0px 25px 0px 0px;
+    }
+}
+
+@media (max-width: 768px) {
+    body.lock {
+        overflow: hidden;
+    }
+    /* ----------------HEADER------------------------------------------------- */
+    .header__logo h3 {
+        font-size: 24px;
+    }
+    .header__logo p {
+        font-size: 10px;
+    }
+    .header__burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 3;
+    }
+    .header__burger span {
+        position: absolute;
+        background-color: #ffffff;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+        -webkit-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
+    }
+    .header__burger::before,
+    .header__burger::after {
+        content: '';
+        background-color: #ffffff;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        -webkit-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
+    }
+    .header__burger::before {
+        top: 0;
+    }
+    .header__burger::after {
+        bottom: 0;
+    }
+    .header__burger.active::before {
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        top: 9px;
+    }
+    .header__burger.active::after {
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+    .header__burger.active span {
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+    }
+    .header__menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: -100%;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: #493C32;
+        padding: 30px;
+        -webkit-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
+    }
+    .header__menu.active {
+        top: 0;
+        right: 0;
+    }
+    .menu-header__list {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .menu-header__list>*:not(:last-child) {
+        margin: 0px 0px 20px 0px;
+    }
+    .header__auth {
+        margin: 0px 20px 0px 0px;
+    }
+}
+
+@media (max-width: 425px) {
+    /* ----------------HEADER------------------------------------------------- */
+    .header {
+        padding: 10px 0px 0px 0px;
+    }
+    .header__logo h3 {
+        font-size: 18px;
+    }
+    .header__logo p {
+        font-size: 8px;
+    }
+    .auth {
+        font-size: 12px;
+    }
 }

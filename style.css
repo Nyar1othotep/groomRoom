@@ -52,7 +52,14 @@ body {
     font-size: 15px;
     font-weight: 400;
     line-height: calc(24 / 15 * 100%);
-    color: #ffffff;
+    color: #000000;
+}
+
+.heading-block__title {
+    font-size: 35px;
+    line-height: calc(45 / 35 * 100%);
+    letter-spacing: 0.06em;
+    color: #545454;
 }
 
 .btn {
@@ -147,6 +154,7 @@ main {
     display: flex;
     align-items: center;
     min-height: 60px;
+    color: #ffffff;
 }
 
 .header__logo h3 {
@@ -231,6 +239,7 @@ main {
     padding: 343px 0px 243px 0px;
     position: relative;
     max-width: 480px;
+    color: #ffffff;
     z-index: 2;
 }
 
@@ -249,6 +258,43 @@ main {
     height: 100%;
     top: 0;
     left: 0;
+}
+
+
+/* ----------------ABOUT------------------------------------------------- */
+
+#about {
+    padding: 100px 0;
+}
+
+.about__body {
+    display: flex;
+}
+
+.about__cat {
+    display: block;
+    flex: 0 1 50%;
+}
+
+.about__cat img {
+    object-fit: contain;
+}
+
+.about__content {
+    flex: 0 1 50%;
+    max-width: 430px;
+}
+
+.about__content>p {
+    color: #4C4C4C;
+}
+
+.about__content>p:not(:last-child) {
+    margin: 0px 0px 10px 0px;
+}
+
+.about__heading {
+    margin: 0px 0px 25px 0px;
 }
 
 
@@ -272,6 +318,10 @@ main {
     /* ----------------HERO------------------------------------------------- */
     .hero__body {
         max-width: 420px;
+    }
+    /* ----------------ABOUT------------------------------------------------- */
+    #about {
+        padding: 50px 0;
     }
 }
 
@@ -385,6 +435,19 @@ main {
     .hero__btn {
         margin: 0 auto;
     }
+    /* ----------------ABOUT------------------------------------------------- */
+    .about__body {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .about__cat {
+        padding: 0 0 50% 0;
+    }
+    .about__content {
+        flex: 0 1 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 642px) {
@@ -401,6 +464,10 @@ main {
     /* ----------------HERO------------------------------------------------- */
     .hero__body {
         padding: 163px 0px 433px 0px;
+    }
+    /* ----------------ABOUT------------------------------------------------- */
+    #about {
+        padding: 30px 0;
     }
 }
 
